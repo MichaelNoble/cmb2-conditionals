@@ -104,9 +104,16 @@ if ( ! class_exists( 'CMB2_Conditionals' ) ) {
 		    	return;
 		    }
 
+		    // Get correct URL and path to wp-content
+			$content_url = untrailingslashit( dirname( dirname( get_stylesheet_directory_uri() ) ) );
+			// Fix path on Windows
+			$dir = wp_normalize_path( __DIR__ );
+			$content_dir = wp_normalize_path( untrailingslashit( WP_CONTENT_DIR ) );
+
+			$url = str_replace( $content_dir, $content_url, $dir );
 			wp_enqueue_script(
 				'cmb2-conditionals',
-				plugins_url( '/cmb2-conditionals.js', __FILE__ ),
+				$url . '/cmb2-conditionals.js',
 				array( 'jquery', 'cmb2-scripts' ),
 				self::VERSION,
 				true

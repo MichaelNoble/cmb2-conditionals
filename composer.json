@@ -8,6 +8,12 @@
             "email": "jcchavezs@gmail.com",
             "homepage": "https://github.com/jcchavezs",
             "role": "Developer"
+        },
+        {
+            "name": "Michael Noble",
+            "email": "michaelznoble@gmail.com",
+            "homepage": "https://github.com/michaelnoble",
+            "role": "Hack"
         }
     ],
     "keywords": ["wordpress", "cmb2", "metabox", "conditionals"],
